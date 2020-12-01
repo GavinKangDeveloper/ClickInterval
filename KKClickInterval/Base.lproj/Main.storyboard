@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JA2-Fs-4zL">
+                                <rect key="frame" x="154" y="194" width="106" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="fjb-MC-r0l"/>
+                                    <constraint firstAttribute="height" constant="49" id="h0M-Zj-sVh"/>
+                                </constraints>
+                                <state key="normal" title="单个Action"/>
+                                <connections>
+                                    <action selector="onSingleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sM2-5F-ayb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADT-XS-nbq">
+                                <rect key="frame" x="154" y="293" width="106" height="49"/>
+                                <state key="normal" title="两个Action"/>
+                                <connections>
+                                    <action selector="onDoubleButtonTouchUpInsideAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Acg-Kh-9o2"/>
+                                    <action selector="onDoubleButtonTouchUpOutsideAction:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Igf-pm-r0u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8K-Q7-nul">
+                                <rect key="frame" x="154" y="392" width="106" height="49"/>
+                                <state key="normal" title="不使用间隔"/>
+                                <connections>
+                                    <action selector="onNormalButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cct-3O-jek"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ADT-XS-nbq" firstAttribute="width" secondItem="JA2-Fs-4zL" secondAttribute="width" id="3t3-7h-RPe"/>
+                            <constraint firstItem="A8K-Q7-nul" firstAttribute="width" secondItem="JA2-Fs-4zL" secondAttribute="width" id="6Jq-Qw-61z"/>
+                            <constraint firstItem="A8K-Q7-nul" firstAttribute="height" secondItem="JA2-Fs-4zL" secondAttribute="height" id="88A-zK-Hch"/>
+                            <constraint firstItem="JA2-Fs-4zL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="8bo-zq-60Y"/>
+                            <constraint firstItem="A8K-Q7-nul" firstAttribute="centerX" secondItem="JA2-Fs-4zL" secondAttribute="centerX" id="FET-Og-w1h"/>
+                            <constraint firstItem="ADT-XS-nbq" firstAttribute="centerX" secondItem="JA2-Fs-4zL" secondAttribute="centerX" id="HVe-L6-fIe"/>
+                            <constraint firstItem="ADT-XS-nbq" firstAttribute="top" secondItem="JA2-Fs-4zL" secondAttribute="bottom" constant="50" id="KGp-0R-jKa"/>
+                            <constraint firstItem="A8K-Q7-nul" firstAttribute="top" secondItem="ADT-XS-nbq" secondAttribute="bottom" constant="50" id="MIy-se-EIV"/>
+                            <constraint firstItem="ADT-XS-nbq" firstAttribute="height" secondItem="JA2-Fs-4zL" secondAttribute="height" id="uDd-Xz-rLA"/>
+                            <constraint firstItem="JA2-Fs-4zL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zkU-9f-s2d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doubleBtn" destination="ADT-XS-nbq" id="xIn-iD-zZN"/>
+                        <outlet property="normalBtn" destination="A8K-Q7-nul" id="a9e-zs-mYB"/>
+                        <outlet property="singleBtn" destination="JA2-Fs-4zL" id="t8v-7Z-qq1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184.05797101449278" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
